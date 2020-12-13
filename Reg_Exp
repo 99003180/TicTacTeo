@@ -1,0 +1,21 @@
+import re
+
+
+class RegExp:
+    def __init__(self, string):
+        self.string = string
+
+    def Str(self):
+        pattern = 'A.+?d$'
+        self.match = re.search(pattern, self.string)
+        print(self.match)
+
+    def RemoveZero(self):
+        ip = input("Enter IP Address")
+        string = re.sub('\.[0]*', '.', ip)
+        print(string)
+obj = RegExp("Anas Mohammed")  # It will return String
+obj1 = RegExp("shahazadi")  # It will return None
+obj.Str()
+obj1.Str()
+obj.RemoveZero()
